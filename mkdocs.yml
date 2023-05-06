@@ -22,7 +22,7 @@ extra:
           data: 5
           note: >-
             Thanks for your feedback!
-        - icon: material/material-emoticon-neutral
+        - icon: material/emoticon-neutral-outline
           name: This page was just okay
           data: 3
           note: >-
