@@ -32,7 +32,7 @@ extra:
       title: Was this page helpful?
       ratings:
         - icon: material/emoticon-sad-outline
-          name: This page was helpful
+          name: This page could be improved
           data: 1
           note: >-
             Thanks for your feedback!
@@ -42,7 +42,7 @@ extra:
           note: >-
             Thanks for your feedback!
         - icon: material/emoticon-happy-outline
-          name: This page could be improved
+          name: This page was helpful
           data: 5
           note: >- 
             Thanks for your feedback!
@@ -53,7 +53,7 @@ plugins:
 
 markdown_extensions:
   - pymdownx.superfences:
-    custom_fences:
-      - name: plotly
-        class: mkdocs-plotly
-        format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly
+      custom_fences:
+        - name: plotly
+          class: mkdocs-plotly
+          format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly

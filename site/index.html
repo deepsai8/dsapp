@@ -1,295 +1,185 @@
 
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-      
-      
-      <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
-    
-    
-      
-        <title>Applied Data Science</title>
-      
-    
-    
-      <link rel="stylesheet" href="assets/stylesheets/main.85bb2934.min.css">
-      
-      
+<!DOCTYPE html>
 
-    
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    <body dir="ltr">
-  
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#welcome-to-mkdocs" class="md-skip">
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.3, mkdocs-material-9.1.9" name="generator"/>
+<title>Applied Data Science</title>
+<link href="assets/stylesheets/main.85bb2934.min.css" rel="stylesheet"/>
+<link href="assets/stylesheets/palette.a6bdf11c.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-QM2HQ2VHSY"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-QM2HQ2VHSY",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-QM2HQ2VHSY",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="indigo" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#welcome-to-applied-data-science">
           Skip to content
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Applied Data Science" class="md-header__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Applied Data Science" class="md-header__button md-logo" data-md-component="logo" href="." title="Applied Data Science">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             Applied Data Science
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
-              Welcome to MkDocs
+              Welcome to Applied Data Science
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
-    
-    
-  </nav>
-  
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_3" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-hidden="true" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="indigo" data-md-color-scheme="default" id="__palette_3" name="__palette" type="radio"/>
+</form>
+</nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href="." title="Applied Data Science" class="md-nav__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
-
-    </a>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Applied Data Science" class="md-nav__button md-logo" data-md-component="logo" href="." title="Applied Data Science">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
     Applied Data Science
   </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Welcome to MkDocs
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Welcome to Applied Data Science
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
-        Welcome to MkDocs
+</label>
+<a class="md-nav__link md-nav__link--active" href=".">
+        Welcome to Applied Data Science
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
     Commands
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-layout">
     Project layout
   </a>
-  
 </li>
-      
-    </ul>
-  
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plotly-plots">
+    Plotly plots
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initial-thoughts">
+    Initial Thoughts
+  </a>
+<nav aria-label="Initial Thoughts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ill-try-to-make-things-as-intuitive-as-possible">
+    I'll try to make things as intuitive as possible!
+  </a>
+</li>
+</ul>
 </nav>
-      
-    </li>
-  
-
-    
-  </ul>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commands">
     Commands
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-layout">
     Project layout
   </a>
-  
 </li>
-      
-    </ul>
-  
+<li class="md-nav__item">
+<a class="md-nav__link" href="#plotly-plots">
+    Plotly plots
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#initial-thoughts">
+    Initial Thoughts
+  </a>
+<nav aria-label="Initial Thoughts" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ill-try-to-make-things-as-intuitive-as-possible">
+    I'll try to make things as intuitive as possible!
+  </a>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="welcome-to-applied-data-science">Welcome to Applied Data Science</h1>
+<p>Here you'll learn all about Applied Data Science in a practical manner <a href="https://deepsai8.github.io/dsapp/">https://deepsai8.github.io/dsapp/</a>.</p>
 <h2 id="commands">Commands</h2>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
@@ -298,53 +188,249 @@
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
 <h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
+<pre><code>mkdocs.yml    # The configuration file .
 docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
 </code></pre>
-
-
-
-
-
+<h2 id="plotly-plots">Plotly plots</h2>
+<div class="mkdocs-plotly">{
+    "data": [
+        {
+            "x": ["giraffes", "orangutans", "monkeys"],
+            "y": [20, 14, 23],
+            "type": "bar"
+        }
+    ]
+}</div>
+<h2 id="initial-thoughts">Initial Thoughts</h2>
+<h3 id="ill-try-to-make-things-as-intuitive-as-possible">I'll try to make things as intuitive as possible!</h3>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="This page could be improved" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="3" title="This page was just okay" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m-3.5-9A1.5 1.5 0 0 1 7 9.5 1.5 1.5 0 0 1 8.5 8 1.5 1.5 0 0 1 10 9.5 1.5 1.5 0 0 1 8.5 11M17 9.5a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 14 9.5 1.5 1.5 0 0 1 15.5 8 1.5 1.5 0 0 1 17 9.5M16 14v2H8v-2h8Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="5" title="This page was helpful" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
                 
-              </article>
+              
+              Thanks for your feedback!
             </div>
-          
-          
-        </div>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+<div data-md-value="3" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+<div data-md-value="5" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
-  
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="assets/javascripts/bundle.fac441b0.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="assets/javascripts/bundle.fac441b0.min.js"></script>
+<script src="javascripts/extra.js"></script>
+<script src="javascripts/feedback.js"></script>
+<span hidden="True" id="default-template-settings">{
+  "font": {
+    "color": "#2a3f5f"
+  },
+  "paper_bgcolor": "rgba(0,0,0,0)",
+  "plot_bgcolor": "#E5ECF6",
+  "polar": {
+    "bgcolor": "#E5ECF6",
+    "angularaxis": {
+      "gridcolor": "white",
+      "linecolor": "white"
+    },
+    "radialaxis": {
+      "gridcolor": "white",
+      "linecolor": "white"
+    }
+  },
+  "ternary": {
+    "bgcolor": "#E5ECF6",
+    "aaxis": {
+      "gridcolor": "white",
+      "linecolor": "white"
+    },
+    "baxis": {
+      "gridcolor": "white",
+      "linecolor": "white"
+    },
+    "caxis": {
+      "gridcolor": "white",
+      "linecolor": "white"
+    }
+  },
+  "xaxis": {
+    "gridcolor": "white",
+    "linecolor": "white",
+    "zerolinecolor": "white"
+  },
+  "yaxis": {
+    "gridcolor": "white",
+    "linecolor": "white",
+    "zerolinecolor": "white"
+  },
+  "scene": {
+    "xaxis": {
+      "backgroundcolor": "#E5ECF6",
+      "gridcolor": "white",
+      "linecolor": "white",
+      "zerolinecolor": "white"
+    },
+    "yaxis": {
+      "backgroundcolor": "#E5ECF6",
+      "gridcolor": "white",
+      "linecolor": "white",
+      "zerolinecolor": "white"
+    },
+    "zaxis": {
+      "backgroundcolor": "#E5ECF6",
+      "gridcolor": "white",
+      "linecolor": "white",
+      "zerolinecolor": "white"
+    }
+  },
+  "shapedefaults": {
+    "line": {
+      "color": "#2a3f5f"
+    }
+  },
+  "annotationdefaults": {
+    "arrowcolor": "#2a3f5f"
+  },
+  "geo": {
+    "bgcolor": "white",
+    "landcolor": "#E5ECF6",
+    "subunitcolor": "white",
+    "lakecolor": "white"
+  },
+  "mapbox": {
+    "style": "light"
+  }
+}</span><span hidden="True" id="slate-template-settings">{
+  "font": {
+    "color": "#f2f5fa"
+  },
+  "paper_bgcolor": "rgba(0,0,0,0)",
+  "plot_bgcolor": "rgb(17,17,17)",
+  "polar": {
+    "bgcolor": "rgb(17,17,17)",
+    "angularaxis": {
+      "gridcolor": "#506784",
+      "linecolor": "#506784"
+    },
+    "radialaxis": {
+      "gridcolor": "#506784",
+      "linecolor": "#506784"
+    }
+  },
+  "ternary": {
+    "bgcolor": "rgb(17,17,17)",
+    "aaxis": {
+      "gridcolor": "#506784",
+      "linecolor": "#506784"
+    },
+    "baxis": {
+      "gridcolor": "#506784",
+      "linecolor": "#506784"
+    },
+    "caxis": {
+      "gridcolor": "#506784",
+      "linecolor": "#506784"
+    }
+  },
+  "xaxis": {
+    "gridcolor": "#283442",
+    "linecolor": "#506784",
+    "zerolinecolor": "#283442"
+  },
+  "yaxis": {
+    "gridcolor": "#283442",
+    "linecolor": "#506784",
+    "zerolinecolor": "#283442"
+  },
+  "scene": {
+    "xaxis": {
+      "backgroundcolor": "rgb(17,17,17)",
+      "gridcolor": "#506784",
+      "linecolor": "#506784",
+      "zerolinecolor": "#C8D4E3"
+    },
+    "yaxis": {
+      "backgroundcolor": "rgb(17,17,17)",
+      "gridcolor": "#506784",
+      "linecolor": "#506784",
+      "zerolinecolor": "#C8D4E3"
+    },
+    "zaxis": {
+      "backgroundcolor": "rgb(17,17,17)",
+      "gridcolor": "#506784",
+      "linecolor": "#506784",
+      "zerolinecolor": "#C8D4E3"
+    }
+  },
+  "shapedefaults": {
+    "line": {
+      "color": "#f2f5fa"
+    }
+  },
+  "annotationdefaults": {
+    "arrowcolor": "#f2f5fa"
+  },
+  "geo": {
+    "bgcolor": "rgb(17,17,17)",
+    "landcolor": "rgb(17,17,17)",
+    "subunitcolor": "#506784",
+    "lakecolor": "rgb(17,17,17)"
+  },
+  "mapbox": {
+    "style": "dark"
+  }
+}</span><script src="assets/javascripts/mkdocs-plotly-plugin.js"></script></body>
 </html>
