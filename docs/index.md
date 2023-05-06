@@ -37,7 +37,7 @@ Here you'll learn all about Applied Data Science in a practical manner [https://
         {
             "x": ["raccoons", "pandas", "wolves"],
             "y": [2, 20, 5],
-            "type": "bar",
+            "type": "bar"
         }
     ]
 }
