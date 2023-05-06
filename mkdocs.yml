@@ -69,12 +69,12 @@ plugins:
     - mkdocstrings
     - git-revision-date
     - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: True
       type: timeago
     - mkdocs-jupyter:
       include_source: True
       ignore_h1_titles: True
-      allow_errors: false
+      allow_errors: False
       ignore: ["conf.py"]
       execute: False
       execute_ignore: ["notebooks/*.ipynb", "workshops/*.ipynb"]
