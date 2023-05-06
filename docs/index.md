@@ -43,5 +43,6 @@ Here you'll learn all about Applied Data Science in a practical manner [https://
 }
 ```
 
+# Initial Thoughts
 ## Initial Thoughts:
 ### I'll try to make things as intuitive as possible!
