@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Welcome to Applied Data Science
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Here you'll learn all about Applied Data Science in a practical manner [https://deepsai8.github.io/dsapp/](https://deepsai8.github.io/dsapp/).
 
 ## Commands
 
