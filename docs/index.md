@@ -29,5 +29,20 @@ Here you'll learn all about Applied Data Science in a practical manner [https://
     ]
 }
 ```
+
+## Plotly plot 2
+``` plotly
+{
+    "data2": [
+        {
+            "x": ["raccoons", "pandas", "wolves"],
+            "y": [2, 20, 5],
+            "type": "bar"
+            "template_slate": "plotly_dark_min"
+        }
+    ]
+}
+```
+
 ## Initial Thoughts:
 ### I'll try to make things as intuitive as possible!
