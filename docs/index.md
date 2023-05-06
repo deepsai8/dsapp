@@ -24,7 +24,7 @@ Here you'll learn all about Applied Data Science in a practical manner [https://
         {
             "x": ["giraffes", "orangutans", "monkeys"],
             "y": [20, 14, 23],
-            "type": "bar"
+            "type": "bar",
         }
     ]
 }
@@ -37,8 +37,8 @@ Here you'll learn all about Applied Data Science in a practical manner [https://
         {
             "x": ["raccoons", "pandas", "wolves"],
             "y": [2, 20, 5],
-            "type": "bar"
-            "template_slate": "plotly_dark_min"
+            "type": "bar",
+            "template_slate": "plotly_dark_min",
         }
     ]
 }
