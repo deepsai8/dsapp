@@ -15,3 +15,6 @@ Here you'll learn all about Applied Data Science in a practical manner [https://
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+## Initial Thoughts
+### I'll try to make things as intuitive as possible!
