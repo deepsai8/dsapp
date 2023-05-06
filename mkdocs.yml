@@ -1,21 +1,33 @@
 site_name: Applied Data Science
+site_description: A Space to learn applied Data Science in intuitive ways
+site_author: Deepak Singh
+site_url: https://deepsai8.github.io/dsapp
+repo_url: https://github.com/depsai8/dsapp
+
+copyright: "Copyright &copy; 2023 Deepak Singh"
 
 theme:
   name: material
   # custom_dir: overrides
   palette:
-    # Palette toggle for light mode
     - scheme: default
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - scheme: slate
+      #   primary: blue
+      #   accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
         name: Switch to light mode
     - accent: cyan
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Google Sans
+    code: Regular
 
 extra_css:
   - stylesheets/extra.css
@@ -57,3 +69,8 @@ markdown_extensions:
         - name: plotly
           class: mkdocs-plotly
           format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly
+
+
+nav:
+    - Home: index.md
+    - Thoughts: thoughts.md

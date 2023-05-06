@@ -2,6 +2,14 @@
 
 Here you'll learn all about Applied Data Science in a practical manner [https://deepsai8.github.io/dsapp/](https://deepsai8.github.io/dsapp/).
 
+
+
+## Links
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+[![Open in Binder](https://mybinder.org/badge_logo.svg)]()
+[![Open In Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws)
+
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
