@@ -16,5 +16,18 @@ Here you'll learn all about Applied Data Science in a practical manner [https://
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
 
+
+## Plotly plots
+``` plotly
+{
+    "data": [
+        {
+            "x": ["giraffes", "orangutans", "monkeys"],
+            "y": [20, 14, 23],
+            "type": "bar"
+        }
+    ]
+}
+```
 ## Initial Thoughts
 ### I'll try to make things as intuitive as possible!
