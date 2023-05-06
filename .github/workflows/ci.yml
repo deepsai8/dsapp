@@ -20,5 +20,5 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material plotly pymdown-extensions
+      - run: pip install mkdocs-material plotly pymdown-extensions mkdocs-plotly-plugin
       - run: mkdocs gh-deploy --force
