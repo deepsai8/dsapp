@@ -8,11 +8,8 @@ copyright: "Copyright &copy; 2023 Deepak Singh"
 
 theme:
   name: material
-  # custom_dir: overrides
   palette:
     - scheme: default
-      #   primary: blue
-      #   accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
@@ -28,6 +25,12 @@ theme:
   font:
     text: Google Sans
     code: Regular
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.share
 
 extra_css:
   - stylesheets/extra.css
@@ -62,6 +65,19 @@ extra:
 
 plugins:
   - plotly
+  - search
+    - mkdocstrings
+    - git-revision-date
+    - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+    - mkdocs-jupyter:
+      include_source: True
+      ignore_h1_titles: True
+      allow_errors: false
+      ignore: ["conf.py"]
+      execute: False
+      execute_ignore: ["notebooks/*.ipynb", "workshops/*.ipynb"]
 
 markdown_extensions:
   - pymdownx.superfences:
