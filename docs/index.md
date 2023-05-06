@@ -33,7 +33,7 @@ Here you'll learn all about Applied Data Science in a practical manner [https://
 ## Plotly plot 2
 ``` plotly
 {
-    "data2": [
+    "data": [
         {
             "x": ["raccoons", "pandas", "wolves"],
             "y": [2, 20, 5],
