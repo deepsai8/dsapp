@@ -66,23 +66,17 @@ extra:
 plugins:
   - plotly
   - search
-  - mkdocstrings
   - git-revision-date
-  - mkdocs-jupyter:
-    include_source: True
-    ignore_h1_titles: True
-    allow_errors: False
-    ignore: ["conf.py"]
-    execute: False
-    execute_ignore: ["notebooks/*.ipynb", "workshops/*.ipynb"]
+  - git-revision-date-localized:
+    enable_creation_date: True
+    type: timeago
 
 markdown_extensions:
   - pymdownx.superfences:
-      custom_fences:
-        - name: plotly
-          class: mkdocs-plotly
-          format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly
-
+    custom_fences:
+      - name: plotly
+        class: mkdocs-plotly
+        format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly
 
 nav:
     - Home: index.md
