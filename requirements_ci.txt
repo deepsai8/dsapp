@@ -2,6 +2,7 @@ mkdocs
 mkdocs-git-revision-date-plugin 
 mkdocs-git-revision-date-localized-plugin
 mkdocs-jupyter
+mkdocs-markmap
 mkdocs-material
 mkdocs-pdf-export-plugin
 mkdocs-plotly-plugin

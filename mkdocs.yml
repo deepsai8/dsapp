@@ -66,6 +66,7 @@ extra:
 
 plugins:
   - plotly
+  - markmap
 
 markdown_extensions:
   # Python Markdown
@@ -107,3 +108,4 @@ markdown_extensions:
 nav:
     - Home: index.md
     - Thoughts: thoughts.md
+    - Markmap: markmap_01.md
