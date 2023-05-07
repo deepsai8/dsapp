@@ -10,6 +10,8 @@ theme:
   name: material
   palette:
     - scheme: default
+      primary: blue
+      accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
@@ -19,7 +21,6 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-    - accent: cyan
   icon:
     repo: fontawesome/brands/github
   font:
@@ -67,6 +68,36 @@ plugins:
   - plotly
 
 markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
   - pymdownx.superfences:
       custom_fences:
         - name: plotly
