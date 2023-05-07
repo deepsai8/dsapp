@@ -27,11 +27,16 @@ theme:
     text: Google Sans
     code: Regular
   features:
-    - navigation.instant
-    - navigation.tracking
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
     - navigation.top
+    - navigation.tracking
     - search.highlight
     - search.share
+    - search.suggest
+    - toc.follow
 
 extra_css:
   - stylesheets/extra.css
@@ -62,11 +67,20 @@ extra:
           data: 5
           note: >- 
             Thanks for your feedback!
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/deepsai8
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/deepaksingh8819
 
 
 plugins:
   - plotly
   - markmap
+  - search:
+    separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+    minify_html: true
 
 markdown_extensions:
   # Python Markdown
@@ -77,7 +91,7 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - toc:
-      permalink: true
+    permalink: true
 
   # Python Markdown Extensions
   - pymdownx.arithmatex:
@@ -106,6 +120,9 @@ markdown_extensions:
           format: !!python/name:mkdocs_plotly_plugin.fences.fence_plotly
 
 nav:
-    - Home: index.md
+  - Home: index.md
+  - Examples:
     - Thoughts: thoughts.md
     - Markmap: markmap_01.md
+  - Blog:
+    - blog/index.md

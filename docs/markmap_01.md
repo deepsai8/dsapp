@@ -1,5 +1,3 @@
-## Here are a few examples of how to use markmap
-
 ```markmap
 # Root
 
