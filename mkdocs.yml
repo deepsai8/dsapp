@@ -91,7 +91,7 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - toc:
-    permalink: true
+      permalink: true
 
   # Python Markdown Extensions
   - pymdownx.arithmatex:
