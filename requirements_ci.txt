@@ -4,6 +4,7 @@ mkdocs-git-revision-date-localized-plugin
 mkdocs-jupyter
 mkdocs-markmap
 mkdocs-material
+mkdocs-minify-plugin
 mkdocs-pdf-export-plugin
 mkdocs-plotly-plugin
 mkdocstrings-python-legacy
