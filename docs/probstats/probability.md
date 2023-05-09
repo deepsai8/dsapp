@@ -1,5 +1,7 @@
 # Probability Theory
 
+A little bit of History <br>
+The modern mathematical theory of probability has its roots in attempts to analyze games of chance by Gerolamo Cardano in the sixteenth century, and by Pierre de Fermat and Blaise Pascal in the seventeenth century (for example the "problem of points"). Christiaan Huygens published a book on the subject in 1657.In the 19th century, what is considered the classical definition of probability was completed by Pierre Laplace [^1]
 Here you'll learn all about Probability Theory in a practical manner
 
 ## Aximoatic Theory
@@ -34,7 +36,7 @@ Here you'll learn all about Probability Theory in a practical manner
 
 
 ### Kolmogorov Axioms
-The Kolmogorov axioms are the foundations of probability theory introduced by Russian mathematician Andrey Kolmogorov in 1933 [^1]. These axioms remain central and have direct contributions to mathematics, the physical sciences, and real-world probability cases. An alternative approach to formalising probability, favoured by some Bayesians, is given by Cox's theorem
+The Kolmogorov axioms are the foundations of probability theory introduced by Russian mathematician Andrey Kolmogorov in 1933 [^2]. These axioms remain central and have direct contributions to mathematics, the physical sciences, and real-world probability cases. An alternative approach to formalising probability, favoured by some Bayesians, is given by Cox's theorem
 
 * Framework: 
     - let S be a sample space for some Random Experiment
@@ -46,9 +48,12 @@ The Kolmogorov axioms are the foundations of probability theory introduced by Ru
 * $P(A)\geq0$, for any event $A \subset S$
     - aka Non-Negativity
 * P(S) = 1
-    - aka Unity
-* If $A_1, A_2, ... $ is a sequence of Mutually Exclusive events, then
-$P\left(\bigcup _{i=1}^{\infty }E_{i}\right)=\sum _{i=1}^{\infty }P(E_{i})$
+    - aka Unitarity or Unity
+* If $A_{1}, A_{2}, ... $ is a sequence of Mutually Exclusive events, then
+$P\left(\bigcup _{i=1}^{\infty }A_{i}\right)=\sum _{i=1}^{\infty }P(A_{i})$
+    - aka $\sigma$-Additivity
 
-[^1]: [Foundations of the theory of probability](https://archive.org/details/foundationsofthe00kolm/page/n7/mode/2up)
+
+[^1]: [Probabilistic Expectation](https://dx.doi.org/10.1016/0315-0860%2880%2990025-7)
+[^2]: [Foundations of the theory of probability](https://archive.org/details/foundationsofthe00kolm/page/n7/mode/2up)
 

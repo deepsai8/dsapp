@@ -99,10 +99,16 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
 
 nav:
   - Home: index.md
-  - Probability Theory: probability.md
+  - Probability & Statistics: 
+    - Probability Theory: probstats/probability.md
   - Examples:
     - Thoughts: thoughts.md
     - Markmap: markmap_01.md
