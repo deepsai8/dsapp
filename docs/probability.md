@@ -15,7 +15,7 @@ Here you'll learn all about Probability Theory in a practical manner
     - dealing a deck of cards (52! permutations)
 
 #### Sample Space
-* A set of all possible outcomes of a random experiment, typically denoted by S or $\OMEGA$
+* A set of all possible outcomes of a random experiment, typically denoted by S or $\varomega$
 
 #### Elements or Outcomes (or Atoms or Singletons)
 * These are the outcomes. Usually denoted by small 's' or $\omega$
@@ -23,4 +23,19 @@ Here you'll learn all about Probability Theory in a practical manner
     - HHH, HHT, HTH, HHT, THH, HTT, THT, TTH, TTT
 * and set1 = {HHH, HHT, HTH} or set2 = {THH, TTH, TTT} or set3 = {TTT} are the events
 * Above entire set of possible outcomes is called a Descrete Random Experiment
+
+#### Event
+* Typically denoted by capital letters A, B etc.
+* It is sort of a subset of S, that can be passed on to a probability measure
+* All set operations can be used to build events
+
+### Probability Measure
+* A notation such as P(A) = P(X>5) is called a probability measure if it satisfies the 3 Axioms of Kolmogorov
+
+
+### Kolmogorov Axioms
+The Kolmogorov axioms are the foundations of probability theory introduced by Russian mathematician Andrey Kolmogorov in 1933 [^1]. These axioms remain central and have direct contributions to mathematics, the physical sciences, and real-world probability cases. An alternative approach to formalising probability, favoured by some Bayesians, is given by Cox's theorem
+
+
+[^1]: [Foundations of the theory of probability](https://archive.org/details/foundationsofthe00kolm/page/n7/mode/2up)
 
