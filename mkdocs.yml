@@ -27,16 +27,21 @@ theme:
     text: Google Sans
     code: Regular
   features:
-    - navigation.footer
-    - navigation.indexes
-    - navigation.sections
-    - navigation.tabs
-    - navigation.top
+    # - navigation.indexes
+    # - navigation.sections
+    # - navigation.tabs
+    # - navigation.top
+    # - navigation.tracking
+    # - search.highlight
+    # - search.share
+    # - search.suggest
+    # - toc.follow
+
+    - navigation.instant
     - navigation.tracking
+    - navigation.top
     - search.highlight
     - search.share
-    - search.suggest
-    - toc.follow
 
 extra_css:
   - stylesheets/extra.css
