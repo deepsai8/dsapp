@@ -42,7 +42,8 @@ theme:
     - navigation.top
     - search.highlight
     - search.share
-
+    - search.suggest
+    
 extra_css:
   - stylesheets/extra.css
 
