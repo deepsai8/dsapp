@@ -82,6 +82,7 @@ extra:
 plugins:
   - plotly
   - markmap
+  - search
 
 
 markdown_extensions:
