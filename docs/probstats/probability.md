@@ -1,7 +1,7 @@
 # Probability Theory
 
 ## A little bit of History
-The modern mathematical theory of probability has its roots in attempts to analyze games of chance by Gerolamo Cardano in the sixteenth century, and by Pierre de Fermat and Blaise Pascal in the seventeenth century (for example the "problem of points"). Christiaan Huygens published a book on the subject in 1657.In the 19th century, what is considered the classical definition of probability was completed by Pierre Laplace [^1]<br>
+The modern mathematical theory of probability has its roots in attempts to analyze games of chance by Gerolamo Cardano in the sixteenth century, and by Pierre de Fermat and Blaise Pascal in the seventeenth century (for example the "problem of points"). Christiaan Huygens published a book on the subject in 1657. In the 19th century, what is considered the classical definition of probability was completed by Pierre Laplace [^1]
 
 ## Probability
 In science, the probability of an event is a number that indicates how likely the event is to occur. It is expressed as a number in the range from 0 and 1, or, using percentage notation, in the range from 0% to 100%. The more likely it is that the event will occur, the higher its probability.
@@ -50,7 +50,7 @@ The Kolmogorov axioms are the foundations of probability theory introduced by Ru
     - we say that P is a probabilty measure ans (S, P) is a probabilty space, if the following 3 axioms are satisfied:
 
 #### Axioms
-* $P(A)\geq0$, for any event $A \subset S$
+* $P(A)\geq0$, for any event $A \subseteq S$
     - aka Non-Negativity
 * P(S) = 1
     - aka Unitarity or Unity
@@ -59,8 +59,8 @@ $P\left(\bigcup _{i=1}^{\infty }A_{i}\right)=\sum _{i=1}^{\infty }P(A_{i})$
     - aka $\sigma$-Additivity
 
 
-[^1]: [Probabilistic Expectation](https://dx.doi.org/10.1016/0315-0860%2880%2990025-7)
+[^1]: <a target="_blank" rel="noopener noreferrer" href = "https://dx.doi.org/10.1016/0315-0860%2880%2990025-7">Probabilistic Expectation</a>
 [^1a]: <a target="_blank" rel="noopener noreferrer" href = "https://en.wikipedia.org/wiki/Deterministic_system">Deterministic System wikipedia</a>
-[^2]: [Foundations of the theory of probability](https://archive.org/details/foundationsofthe00kolm/page/n7/mode/2up)
-[^3]: [By Tim Stellmach - Own work using Inkscape and Open Office Draw software., Public Domain, https://commons.wikimedia.org/w/index.php?curid=1220091](https://commons.wikimedia.org/wiki/File:Dice_Distribution_(bar).svg)
+[^2]: <a target="_blank" rel="noopener noreferrer" href = "https://archive.org/details/foundationsofthe00kolm/page/n7/mode/2up">Foundations of the theory of probability</a>
+[^3]: <a target="_blank" rel="noopener noreferrer" href = "https://commons.wikimedia.org/wiki/File:Dice_Distribution_(bar).svg">By Tim Stellmach - Own work using Inkscape and Open Office Draw software., Public Domain, https://commons.wikimedia.org/w/index.php?curid=1220091</a>
 

@@ -9,18 +9,37 @@ copyright: "Copyright &copy; 2023 Deepak Singh"
 theme:
   name: material
   palette:
-    - scheme: default
-      primary: blue
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+      - media: "(prefers-color-scheme)"
+        toggle:
+            icon: material/brightness-auto
+            name: Switch to light mode
+      - media: "(prefers-color-scheme: light)"
+        accent: blue
+        primary: blue
+        scheme: default
+        toggle:
+            icon: material/weather-sunny
+            name: Switch to dark mode
+      - media: "(prefers-color-scheme: dark)"
+        accent: blue
+        primary: blue
+        scheme: slate
+        toggle:
+            icon: material/weather-night
+            name: Switch to light mode
+  # palette:
+  #   - scheme: default
+  #     primary: blue
+  #     accent: indigo
+  #     toggle:
+  #       icon: material/toggle-switch-off-outline
+  #       name: Switch to dark mode
+  #   - scheme: slate
+  #     primary: indigo
+  #     accent: indigo
+  #     toggle:
+  #       icon: material/toggle-switch
+  #       name: Switch to light mode
   icon:
     repo: fontawesome/brands/github
   font:
