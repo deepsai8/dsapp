@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://deepsai8.github.io/dsapp/</loc>
-         <lastmod>2023-05-07</lastmod>
+         <lastmod>2023-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deepsai8.github.io/dsapp/markmap_01/</loc>
-         <lastmod>2023-05-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://deepsai8.github.io/dsapp/thoughts/</loc>
-         <lastmod>2023-05-07</lastmod>
+         <lastmod>2023-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://deepsai8.github.io/dsapp/blogs/</loc>
-         <lastmod>2023-05-07</lastmod>
+         <lastmod>2023-05-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://deepsai8.github.io/dsapp/deeplearning/nn/</loc>
+         <lastmod>2023-05-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://deepsai8.github.io/dsapp/probstats/probability/</loc>
+         <lastmod>2023-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

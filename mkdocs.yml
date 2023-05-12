@@ -128,8 +128,8 @@ nav:
   - Home: index.md
   - Probability & Statistics: 
     - Probability Theory: probstats/probability.md
+  - Deep Learning:
+    - Neural Networks: deeplearning/nn.md
   - Examples:
-    - Thoughts: thoughts.md
     - Markmap: markmap_01.md
-  - Blog:
-    - blog/index.md
+  - Blog: blog/index.md

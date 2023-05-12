@@ -12,23 +12,27 @@
         <meta name="author" content="Deepak Singh">
       
       
-        <link rel="canonical" href="https://deepsai8.github.io/dsapp/blogs/">
+        <link rel="canonical" href="https://deepsai8.github.io/dsapp/probstats/probability/">
       
       
+        <link rel="prev" href="../..">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      
+        <link rel="next" href="../../deeplearning/nn/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
-        <title>Index - Applied Data Science</title>
+        <title>Probability Theory - Applied Data Science</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -44,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -87,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blogs-here" class="md-skip">
+        <a href="#probability-theory" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +107,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Applied Data Science" class="md-header__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
+    <a href="../.." title="Applied Data Science" class="md-header__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -122,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              Probability Theory
             
           </span>
         </div>
@@ -243,7 +247,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Applied Data Science" class="md-nav__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
+    <a href="../.." title="Applied Data Science" class="md-nav__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -274,7 +278,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -287,14 +291,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -303,7 +309,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Probability & Statistics
@@ -314,11 +320,147 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../probstats/probability/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Probability Theory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Probability Theory
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-little-bit-of-history" class="md-nav__link">
+    A little bit of History
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability" class="md-nav__link">
+    Probability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aximoatic-theory" class="md-nav__link">
+    Aximoatic Theory
+  </a>
+  
+    <nav class="md-nav" aria-label="Aximoatic Theory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deterministic-system" class="md-nav__link">
+    Deterministic System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-experiment" class="md-nav__link">
+    Random Experiment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-space" class="md-nav__link">
+    Sample Space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-or-outcomes-or-atoms-or-singletons" class="md-nav__link">
+    Elements or Outcomes (or Atoms or Singletons)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event" class="md-nav__link">
+    Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probability-measure" class="md-nav__link">
+    Probability Measure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kolmogorov-axioms" class="md-nav__link">
+    Kolmogorov Axioms
+  </a>
+  
+    <nav class="md-nav" aria-label="Kolmogorov Axioms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#axioms" class="md-nav__link">
+    Axioms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -365,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deeplearning/nn/" class="md-nav__link">
+      <a href="../../deeplearning/nn/" class="md-nav__link">
         Neural Networks
       </a>
     </li>
@@ -414,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markmap_01/" class="md-nav__link">
+      <a href="../../markmap_01/" class="md-nav__link">
         Markmap
       </a>
     </li>
@@ -436,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/index.md" class="md-nav__link">
+      <a href="../../blog/index.md" class="md-nav__link">
         Blog
       </a>
     </li>
@@ -460,6 +602,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -468,9 +612,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#blogs-here" class="md-nav__link">
-    Blogs here
+  <a href="#a-little-bit-of-history" class="md-nav__link">
+    A little bit of History
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability" class="md-nav__link">
+    Probability
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aximoatic-theory" class="md-nav__link">
+    Aximoatic Theory
+  </a>
+  
+    <nav class="md-nav" aria-label="Aximoatic Theory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deterministic-system" class="md-nav__link">
+    Deterministic System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-experiment" class="md-nav__link">
+    Random Experiment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-space" class="md-nav__link">
+    Sample Space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elements-or-outcomes-or-atoms-or-singletons" class="md-nav__link">
+    Elements or Outcomes (or Atoms or Singletons)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event" class="md-nav__link">
+    Event
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probability-measure" class="md-nav__link">
+    Probability Measure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kolmogorov-axioms" class="md-nav__link">
+    Kolmogorov Axioms
+  </a>
+  
+    <nav class="md-nav" aria-label="Kolmogorov Axioms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#axioms" class="md-nav__link">
+    Axioms
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -492,9 +731,96 @@
   
 
 
-  <h1>Index</h1>
-
-<h3 id="blogs-here">Blogs here</h3>
+<h1 id="probability-theory">Probability Theory</h1>
+<h2 id="a-little-bit-of-history">A little bit of History</h2>
+<p>The modern mathematical theory of probability has its roots in attempts to analyze games of chance by Gerolamo Cardano in the sixteenth century, and by Pierre de Fermat and Blaise Pascal in the seventeenth century (for example the "problem of points"). Christiaan Huygens published a book on the subject in 1657. In the 19th century, what is considered the classical definition of probability was completed by Pierre Laplace <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h2 id="probability">Probability</h2>
+<p>In science, the probability of an event is a number that indicates how likely the event is to occur. It is expressed as a number in the range from 0 and 1, or, using percentage notation, in the range from 0% to 100%. The more likely it is that the event will occur, the higher its probability.</p>
+<h2 id="aximoatic-theory">Aximoatic Theory</h2>
+<h3 id="definitions">Definitions</h3>
+<h4 id="deterministic-system">Deterministic System</h4>
+<p>In mathematics, computer science and physics, a deterministic system is a system in which no randomness is involved in the development of future states of the system. A deterministic model will thus always produce the same output from a given starting condition or initial state.<sup id="fnref:1a"><a class="footnote-ref" href="#fn:1a">2</a></sup></p>
+<h4 id="random-experiment">Random Experiment</h4>
+<ul>
+<li>It's a process or an outcome that is not deterministic, i.e. it is stoichastic</li>
+<li>e.g. <span class="arithmatex">\(f(x) = x^{2}\)</span> <br/><ul>
+<li>or fixed input =&gt; fixed output, meaning deterministic</li>
+</ul>
+</li>
+<li>e.g. <ul>
+<li>Roll a die (6 possibilities)</li>
+<li>dealing a deck of cards (52! permutations)</li>
+</ul>
+</li>
+</ul>
+<h4 id="sample-space">Sample Space</h4>
+<ul>
+<li>A set of all possible outcomes of a random experiment, typically denoted by S or <span class="arithmatex">\(\Omega\)</span></li>
+</ul>
+<h4 id="elements-or-outcomes-or-atoms-or-singletons">Elements or Outcomes (or Atoms or Singletons)</h4>
+<ul>
+<li>These are the outcomes. Usually denoted by small 's' or <span class="arithmatex">\(\omega\)</span></li>
+<li>e.g. Flip a coin 3 times (order matters), will have these outcomes or elements:<ul>
+<li>HHH, HHT, HTH, HHT, THH, HTT, THT, TTH, TTT</li>
+</ul>
+</li>
+<li>and set1 = {HHH, HHT, HTH} or set2 = {THH, TTH, TTT} or set3 = {TTT} are the events</li>
+<li>Above entire set of possible outcomes is called a Descrete Random Experiment</li>
+</ul>
+<h4 id="event">Event</h4>
+<ul>
+<li>Typically denoted by capital letters A, B etc.</li>
+<li>It is sort of a subset of S, that can be passed on to a probability measure</li>
+<li>All set operations can be used to build events</li>
+</ul>
+<h4 id="probability-measure">Probability Measure</h4>
+<ul>
+<li>A notation such as P(A) = P(X&gt;5) is called a probability measure if it satisfies the 3 Axioms of Kolmogorov</li>
+</ul>
+<h3 id="kolmogorov-axioms">Kolmogorov Axioms</h3>
+<p>The Kolmogorov axioms are the foundations of probability theory introduced by Russian mathematician Andrey Kolmogorov in 1933 <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">3</a></sup>. These axioms remain central and have direct contributions to mathematics, the physical sciences, and real-world probability cases. An alternative approach to formalising probability, favoured by some Bayesians, is given by Cox's theorem</p>
+<ul>
+<li>Framework: <ul>
+<li>let S be a sample space for some Random Experiment</li>
+<li>let P be a function from P : P(S) -&gt; R</li>
+<li>here, P(S) = Power set = {set of all subsets of S}</li>
+<li>we say that P is a probabilty measure ans (S, P) is a probabilty space, if the following 3 axioms are satisfied:</li>
+</ul>
+</li>
+</ul>
+<h4 id="axioms">Axioms</h4>
+<ul>
+<li><span class="arithmatex">\(P(A)\geq0\)</span>, for any event <span class="arithmatex">\(A \subseteq S\)</span><ul>
+<li>aka Non-Negativity</li>
+</ul>
+</li>
+<li>P(S) = 1<ul>
+<li>aka Unitarity or Unity</li>
+</ul>
+</li>
+<li>If <span class="arithmatex">\(A_{1}, A_{2}, ...\)</span> is a sequence of Mutually Exclusive events, then
+<span class="arithmatex">\(P\left(\bigcup _{i=1}^{\infty }A_{i}\right)=\sum _{i=1}^{\infty }P(A_{i})\)</span><ul>
+<li>aka <span class="arithmatex">\(\sigma\)</span>-Additivity</li>
+</ul>
+</li>
+</ul>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="https://dx.doi.org/10.1016/0315-0860%2880%2990025-7" rel="noopener noreferrer" target="_blank">Probabilistic Expectation</a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:1a">
+<p><a href="https://en.wikipedia.org/wiki/Deterministic_system" rel="noopener noreferrer" target="_blank">Deterministic System wikipedia</a> <a class="footnote-backref" href="#fnref:1a" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://archive.org/details/foundationsofthe00kolm/page/n7/mode/2up" rel="noopener noreferrer" target="_blank">Foundations of the theory of probability</a> <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://commons.wikimedia.org/wiki/File:Dice_Distribution_(bar).svg" rel="noopener noreferrer" target="_blank">By Tim Stellmach - Own work using Inkscape and Open Office Draw software., Public Domain, https://commons.wikimedia.org/w/index.php?curid=1220091</a> <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 
 
   
@@ -621,16 +947,16 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
       
-        <script src="../javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
-        <script src="../javascripts/feedback.js"></script>
+        <script src="../../javascripts/feedback.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
