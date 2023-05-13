@@ -131,6 +131,8 @@ nav:
     - Probability Theory: probstats/probability.md
   - Deep Learning:
     - Neural Networks: deeplearning/nn.md
+  - SQL:
+    - SQL Theory: sdbms/sql_theory.md
   - Examples:
     - Markmap: markmap_01.md
   - Blog: blog/index.md
