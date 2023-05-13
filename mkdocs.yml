@@ -132,7 +132,7 @@ nav:
   - Deep Learning:
     - Neural Networks: deeplearning/nn.md
   - DBMS:
-    - SQL Theory: sdbms/sql_theory.md
+    - SQL Theory: dbms/sql_theory.md
   - Examples:
     - Markmap: markmap_01.md
   - Blog: blog/index.md
