@@ -106,7 +106,8 @@ extra:
 plugins:
   - plotly
   - markmap
-  - search
+  - search:
+    separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
 
 
 markdown_extensions:
