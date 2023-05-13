@@ -77,7 +77,7 @@ extra_javascript:
 extra:
   analytics:
     provider: google
-    property: ${{ vars.GOOGLE_ANALYTICS_KEY }}
+    property: G-QM2HQ2VHSY
     feedback:
       title: Was this page helpful?
       ratings:
