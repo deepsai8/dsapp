@@ -133,6 +133,7 @@ nav:
     - Neural Networks: deeplearning/nn.md
   - DBMS:
     - SQL Theory: dbms/sql_theory.md
+    - psycopg: dbms/psycopg.md
   - Examples:
     - Markmap: markmap_01.md
   - Blog: blog/index.md
