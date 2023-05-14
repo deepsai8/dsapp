@@ -1,6 +1,6 @@
-### Environment Setup
+## Environment Setup
 
-#### Conda environment commands
+### Conda environment commands
 
 conda create --name DistributedComputing python=3 -y
 
@@ -22,7 +22,7 @@ conda env create -f DistributedComputing_environment.yml -n DistributedComputing
 
 conda env update -f DistributedComputing_environment.yml -n DistributedComputing
 
-#### test suit
+### test suit
 - pytest -vv
 - pycodestyle hw1.py
 - autopep8 --in-place --aggressive <filename<filename>>
@@ -30,7 +30,7 @@ conda env update -f DistributedComputing_environment.yml -n DistributedComputing
 ### Git
 - git remote -v (to check the url to push and pull data)
 
-#### Installation of postgresql
+### Installation of postgresql
 
 on terminal:
 - setup
@@ -117,7 +117,7 @@ A DBMS serves as an interface between the database and its end users or programs
 Notes:
 - ER designs are subjective in nature - meaning, there are multiple possible choices of design
 
-# SQL
+## SQL
 
 Most widely used language for creating, manipulating and querying RDBMS
 
@@ -137,7 +137,7 @@ Most widely used language for creating, manipulating and querying RDBMS
 - Update
 - Delete
 
-## Keys
+### Keys
 
 Super key: Attributes that can uniquely identify a tuple
 
