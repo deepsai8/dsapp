@@ -1,0 +1,1530 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Space to learn applied Data Science in intuitive ways">
+      
+      
+        <meta name="author" content="Deepak Singh">
+      
+      
+        <link rel="canonical" href="https://deepsai8.github.io/dsapp/dbms/sql_theory/">
+      
+      
+        <link rel="prev" href="../../deeplearning/nn/">
+      
+      
+        <link rel="next" href="../psycopg/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
+    
+    
+      
+        <title>SQL Theory - Applied Data Science</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,700,700i%7CRegular:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Regular"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-QM2HQ2VHSY"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-QM2HQ2VHSY",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-QM2HQ2VHSY",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#environment-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Applied Data Science" class="md-header__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Applied Data Science
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SQL Theory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_3">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/deepsai8/dsapp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Applied Data Science" class="md-nav__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Applied Data Science
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/deepsai8/dsapp" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Probability & Statistics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Probability & Statistics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../probstats/probability/" class="md-nav__link">
+        Probability Theory
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Deep Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Deep Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deeplearning/nn/" class="md-nav__link">
+        Neural Networks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          DBMS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DBMS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SQL Theory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SQL Theory
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    Environment Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda-environment-commands" class="md-nav__link">
+    Conda environment commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-suit" class="md-nav__link">
+    test suit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-postgresql" class="md-nav__link">
+    Installation of postgresql
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dbms" class="md-nav__link">
+    DBMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-dbms" class="md-nav__link">
+    Why DBMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdbms" class="md-nav__link">
+    RDBMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relational-model" class="md-nav__link">
+    Relational Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-steps-of-relational-db-design" class="md-nav__link">
+    6 Steps of Relational DB Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#er-model-entity-relationship" class="md-nav__link">
+    ER Model (Entity-Relationship)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ddl" class="md-nav__link">
+    DDL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crud" class="md-nav__link">
+    CRUD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keys" class="md-nav__link">
+    Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    Data Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../psycopg/" class="md-nav__link">
+        psycopg
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../markmap_01/" class="md-nav__link">
+        Markmap
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/index.md" class="md-nav__link">
+        Blog
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environment-setup" class="md-nav__link">
+    Environment Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda-environment-commands" class="md-nav__link">
+    Conda environment commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-suit" class="md-nav__link">
+    test suit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-of-postgresql" class="md-nav__link">
+    Installation of postgresql
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+    <nav class="md-nav" aria-label="Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dbms" class="md-nav__link">
+    DBMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-dbms" class="md-nav__link">
+    Why DBMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdbms" class="md-nav__link">
+    RDBMS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relational-model" class="md-nav__link">
+    Relational Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-steps-of-relational-db-design" class="md-nav__link">
+    6 Steps of Relational DB Design
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#er-model-entity-relationship" class="md-nav__link">
+    ER Model (Entity-Relationship)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ddl" class="md-nav__link">
+    DDL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crud" class="md-nav__link">
+    CRUD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keys" class="md-nav__link">
+    Keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    Data Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>SQL Theory</h1>
+
+<h2 id="environment-setup">Environment Setup</h2>
+<h3 id="conda-environment-commands">Conda environment commands</h3>
+<p>conda create --name DistributedComputing python=3 -y</p>
+<p>conda activate DistributedComputing</p>
+<p>conda info --envs (this will list all available envs) <br/></p>
+<p>conda list -n DistributedComputing (this will list all packages in the env)</p>
+<p>conda deactivate</p>
+<p>conda env list (this will list all available envs)</p>
+<p>conda env remove --name DistributedComputing</p>
+<p>conda env export  -n DistributedComputing --no-build &gt; DistributedComputing_environment.yml</p>
+<p>conda env create -f DistributedComputing_environment.yml -n DistributedComputing <br/></p>
+<p>conda env update -f DistributedComputing_environment.yml -n DistributedComputing</p>
+<h3 id="test-suit">test suit</h3>
+<ul>
+<li>pytest -vv</li>
+<li>pycodestyle hw1.py</li>
+<li>autopep8 --in-place --aggressive <filename\<filename>&gt;</filename\<filename></li>
+</ul>
+<h3 id="git">Git</h3>
+<ul>
+<li>git remote -v (to check the url to push and pull data)</li>
+</ul>
+<h3 id="installation-of-postgresql">Installation of postgresql</h3>
+<p>on terminal:
+- setup
+<div class="highlight"><pre><span></span><code>$ brew install postgresql@15
+</code></pre></div>
+- initialize db (create the dirs if required)
+<div class="highlight"><pre><span></span><code>$ initdb /usr/local/var/postgres 
+</code></pre></div>
+- start the server on your local machine
+<div class="highlight"><pre><span></span><code>$ postgres -D /usr/local/var/postgres
+</code></pre></div>
+- to use terminal as an interface
+<div class="highlight"><pre><span></span><code>$ psql postgres 
+</code></pre></div>
+<br/><br/></p>
+<p>Connections using host, port, username(postgres)
+- I would recommend installing one of these
+    - pgadmin
+    - DBeaver
+    - SQuirrel
+    - to use postgresql on jupyter lab/notebooks: <code>$ conda install psycopg2</code></p>
+<h2 id="database">Database</h2>
+<p>A database is an organized collection of structured information, or data, typically stored electronically in a computer system <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h3 id="dbms">DBMS</h3>
+<p>A DBMS serves as an interface between the database and its end users or programs, allowing users to retrieve, update, and manage how the information is organized and optimized. A DBMS also facilitates oversight and control of databases, enabling a variety of administrative operations such as performance monitoring, tuning, and backup and recovery.<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h3 id="why-dbms">Why DBMS</h3>
+<ol>
+<li>Data Independence : The DBMS provides an abstract view of the data that hides details of data representation and storage.</li>
+<li>Efficient Data Access : Store and retrieve data efficiently.</li>
+<li>Data Integrity and Security : Enforce data integrity and access controls that governs what data is visible to different classes of users.</li>
+<li>Data Administration : When several users share the data, it centralize the administration of data.</li>
+<li>Concurrent Access and Crash Recovery : A DBMS schedules concurrent access to the data in such a manner that users can think of the data accessed by one user at a time. And The DBMS protects from the effects of system failures.</li>
+<li>Reduced Application and Development Time : Provides functions to access data.</li>
+</ol>
+<h3 id="rdbms">RDBMS</h3>
+<ul>
+<li>A relational database is a (most commonly digital) database based on the relational model of data, as proposed by E. F. Codd in 1970 <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></li>
+<li>Based on a relational data model</li>
+</ul>
+<h3 id="relational-model">Relational Model</h3>
+<ul>
+<li>A relational model organizes data into one or more tables (or "relations") of columns and rows, with a unique key identifying each row. Rows are also called records or tuples. Columns are also called attributes. Generally, each table/relation represents one "entity type" (such as customer or product). The rows represent instances of that type of entity (such as "Lee" or "chair") and the columns represent values attributed to that instance (such as address or price)</li>
+<li>Every relation has a schema or a description of the data which specifies its name, column/attribute/field name, type of data (e.g. string, int etc.), and integrity constraints (e.g. primary keys, unique keys foreign keys, other conditions etc.)</li>
+</ul>
+<figure>
+<p><a class="glightbox" href="../images/rdbms.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" src="../images/rdbms.png" width="300"/></a>
+</p>
+<figcaption>RDBMS ER model</figcaption>
+</figure>
+<h3 id="6-steps-of-relational-db-design">6 Steps of Relational DB Design</h3>
+<ol>
+<li>Requirements Analysis: find out what the users want from the DB</li>
+<li>Conceptual DB Design: Develop a high-level description of the data to be stored (aka ER or Entity-Relationship diagram)</li>
+<li>Logical DB Design: Convert the conceptual DB design into a DB schema</li>
+<li>Schema Refinement: Identify potential problems and refine it</li>
+<li>Physical DB Design: Ensure that the DB design meets desired performance criteria</li>
+<li>Security Design: Define roles and identify the parts of the DB that should/should not be accessible by those roles</li>
+</ol>
+<h3 id="er-model-entity-relationship">ER Model (Entity-Relationship)</h3>
+<ul>
+<li>This is done to describe entities or objects, their relationships and the constraints</li>
+<li>Entities are objects distinguishable from other objects</li>
+<li>An entity os described using a set of attributes</li>
+<li>Each attribute in an entity has a domain of possible values</li>
+<li>Primary key can be defined from here as:<ul>
+<li>Primary Key : A minimal set of attributes whose values uniquely identify an entity in the set</li>
+</ul>
+</li>
+<li>Relationships are association among two or more entities</li>
+<li>Constraints<ul>
+<li>Key constraints : Restrict 1-1, 1-many, and many-many relationships</li>
+<li>Participation Constraints : partial and total constraint<ul>
+<li>Total - Every instance of an entity is participating the relationship</li>
+<li>Partial - The participation of an entity in the relationship is not total</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Notes:
+- ER designs are subjective in nature - meaning, there are multiple possible choices of design</p>
+<h2 id="sql">SQL</h2>
+<p>Most widely used language for creating, manipulating and querying RDBMS</p>
+<ul>
+<li>RDBMS uses dot notation when referring to database objects;<ul>
+<li>e.g. database.schema.table.column</li>
+</ul>
+</li>
+<li>SQL ignores hard returns, additional white spaces and is generally case insensitive</li>
+<li>A statement ends with semicolon ;</li>
+</ul>
+<h3 id="ddl">DDL</h3>
+<ul>
+<li>Create a DB: <code>CREATE DATABASE database_name;</code></li>
+<li>Create a schema: <code>CREATE SCHEMA schema_name;</code></li>
+</ul>
+<h3 id="crud">CRUD</h3>
+<ul>
+<li>Create</li>
+<li>Read</li>
+<li>Update</li>
+<li>Delete</li>
+</ul>
+<h3 id="keys">Keys</h3>
+<p>Super key: Attributes that can uniquely identify a tuple</p>
+<p>Candidate Key: Minimal subset of Attributes that can uniquely identify a tuple</p>
+<p>Unique Key: 
+- Minimal subset of Columns that can uniquely identify a tuple
+- Can be null
+- Table can have multiple unique keys</p>
+<p>Primary Key
+- Minimal subset of Columns that can uniquely identify a tuple
+- Can <b>Not</b> be null
+- Only one primary key exists in a table</p>
+<p>Foreign Key
+- Info stored in a relation linked to the info stored in another relation
+- If one gets modified, the other must be modified/checked to see consistency
+- Foreign key in the referencing relation must match primay key in the referenced relation, however, names can be different</p>
+<p>The data definition language deals with the schema creation and modification e.g., CREATE TABLE statement allows you to create a new table in the database and the ALTER TABLE statement changes the structure of an existing table.</p>
+<p>The data manipulation language provides the constructs to query data such as the SELECT statement and to update the data such as INSERT, UPDATE, and DELETE statements.</p>
+<p>The data control language consists of the statements that deal with the user authorization and security such as GRANT and REVOKE statements.</p>
+<h3 id="data-types">Data Types</h3>
+<div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
+<h5> RDB Design</h5>
+<a class="glightbox" href="images/sql_data_types.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img border="1," height="50%" src="images/sql_data_types.jpg" style="display: block; margin: 0 auto" width="100%"/></a> <br/>
+<div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
+<h5> RDB Design</h5>
+<a class="glightbox" href="images/null_data_types.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img border="1," height="50%" src="images/null_data_types.jpg" style="display: block; margin: 0 auto" width="100%"/></a> <br/>
+
+#### Cast operator
+- cast(expression as target_type)
+- expression::target_type
+
+#### Type Conversion
+
+<div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
+<h5> RDB Design</h5>
+<a class="glightbox" href="images/type_convert.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img border="1," height="50%" src="images/type_convert.jpg" style="display: block; margin: 0 auto" width="100%"/></a> <br/>
+
+### Functions
+
+<div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
+<h5> RDB Design</h5>
+<a class="glightbox" href="images/func_string1.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img border="1," height="50%" src="images/func_string1.jpg" style="display: block; margin: 0 auto" width="100%"/></a> <br/>
+<div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
+<h5> RDB Design</h5>
+<a class="glightbox" href="images/func_string2.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img border="1," height="50%" src="images/func_string2.jpg" style="display: block; margin: 0 auto" width="100%"/></a> <br/>
+<div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
+<h5> RDB Design</h5>
+<a class="glightbox" href="images/func_maths1.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img border="1," height="50%" src="images/func_maths1.jpg" style="display: block; margin: 0 auto" width="100%"/></a> <br/>
+
+
+
+
+## Index Algorithms
+
+### Database performance
+Best way to store/find data for better performance
+
+-DBMS: collection of records or a file, and each file consisting of one or more pages
+- Page: Unit of information read from or written to disk
+    - Page I/O dominates the cost of typical database operations
+    - If we read pages in the order that the data is stored physically, the cost can be much less
+- Record: Each record in a file has a unique identifier (Record ID or rid), to identify the address of the page containing the record
+    - using rid, DBMS fetches the page including data from disk to memory
+
+Best way to organize records in a file when the file is stored on the disk for fast access to desired subset of records
+
+### Index:
+- Data structure that organized data records on disk to optimize data retrievals using search key
+- A good indexing algorithm improves query performance significantly
+
+Some terminology:
+- a data entry, k* is a data records stored in an index file
+    - a data entry has a search key value k
+    - a data entry contains information to locate data records with k
+
+Clustered Indexes
+- order of the data records is the same or close to the order of data entries
+Unclustered Indexes
+- order of the data records is not the same or close to the order of data entries
+
+### Hash Index
+- the records are grouped in buckets, where buckets consists of pages(s)
+- the bucket that a record belongs to can be determined by applying hash function to the search key
+
+
+### BTree Indexing
+- Organize records using a self balancing tree structure
+- data entries are arranged in sorted order by search key value
+- a hierarchical search data structure is maintained that directs searches to the correct page of data entries
+- all searches begin at the topmost node, and the contents of pages in non-leaf levels direct search to the correct leaf page
+- all leaves that contain the data entries are at the same level and are pointed in a doubly-linked list
+
+By default, Postgres doesn't maintain clustered index. We can cluster a table according to an index
+<div class="highlight"><pre><span></span><code><span class="k">CLUSTER</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">USING</span><span class="w"> </span><span class="n">index_name</span>
+</code></pre></div>
+- When a table is clustered, it is physically reordered based on the index information. 
+- Clustering is a one time operation, when the table is subsequently updated, the changes are not clustered
+
+
+
+What indexes should we create/use?
+- consider the most important/frequent query types. consider the best plan using the current indexes, and see if a better plan is possible with an additinal index
+- attributes in WHERE clause are candidates for index keys
+    - exact match or range
+- composit index and their order
+    - multi-attribute search keys should be considered when a WHERE clause contains several conditions
+- before creating an index we must also consider the impact on indexes
+
+### Factors affecting performance
+- B = # of pages
+- R = # of records per page
+- D = Avg time to read or write to a disk page
+- C = Avg time to process a record
+- H = Time required to apply the hash function to a record
+- F = Fan-Out (Avg # of children to a non-leaf node)
+
+Test Results
+No Index model
+- Scan = B * (D + R*C)
+- Search with equality selection = 0.5 * B * (D + R*C)
+- Search with range selection = B * (D + R*C)
+- Insert a Record = D + C + D = 2*D + C
+- Delete a Record = Search with equality + C + D
+
+Hash Index model
+Assumption: each data entry is 10% of the size of a data record, and pages are about 80% occupancy <br/>
+Therefore: # of pages required to store data entries: <br/>
+4/5 full with 10% data entry size =&gt; (5/4 * B) * 0.1 = 0.125 * B <br/>
+And # of data entries that can fit in a page: <br/>
+4/5 * R * (1/10%) = 4/5 * R * 10 = 8*R
+
+- Scan = 0.125 * B * (D + 8*R*C) + B*R * (D + C) = BD (R + 0.125) + 2BRC
+- Search with equality selection = H + D + 0.5 * 8*R*C + D = H + 2*D + 4*R*C
+- Search with range selection = B * (D + R*C)
+- Insert a Record = H + 2*D + C + 2*D + C = H + 4*D + 2*C
+- Delete a Record = Serch with equality + 2*D
+
+BTree Index model (default for Postgress and other DBs)
+Assumptions: Pages are usually 2/3 occupancy <br/>
+Therefore: # of pages = 3/2 pages = 1.5 * B <br/>
+Also, locate the page in $log_F$(1.5*B) * D and search the qualifying record in a page in $log_2$(R) * C
+- Scan = 1.5 * B * (D + R*C)
+- Search with equality selection = $log_F$(1.5*B) * D + $log_2$(R) * C
+- Search with range selection = Equality selection + B
+- Insert a Record = Search with equality + D
+- Delete a Record = search with equality + D
+
+d = {'IndexType':['no_index', 'hash', 'btree'],
+    'Scan':['BD', 'BD(R + 0.125) + 2BRC', '1.5BD'],
+     'EqualitySearch': ['0.5BD', '2D', r'D$\log_F$(1.5B)'],
+     'RangeSearch': ['BD', 'BD', r'D$\log_F$(1.5B) + $log_2$(R) * C'],
+     'Insert': ['2D', '4D', 'Search + D'],
+     'Delete': ['Search + D', 'Search + 2D', 'Search + D']
+    }
+
+### Views
+- a named query that provides a way to present data in the base tables
+    - the view is not physically materialized, working with the base table
+    - name of the view must be distinct from the name of any other view, table, index etc in the same schema
+    - you can query a view just as you do with tables
+
+
+
+### Transaction
+- A unit of work which bundles multiple steps into a single operation
+- a transaction is treated in a coherent and reliable way independent of other transactions
+- foundation for concurrent execution and recovery from system failures
+
+lookup `database transaction` in wikipedia.org and postgresql.org
+
+postgresql:
+- auto-commit: each successful query is committed after execution
+- auto-rollback: failed queries are rolled back
+
+## ACID
+
+### Atomicity
+- Actions in transactions are carried out all or none
+    - DBMS logs all actions so that it can undo the actions of aborted transactions
+
+### Consistency
+- A transaction must change affected data, only in allowed ways, according to all defined rules
+
+### Isolation
+- When there are several transactions happening concurrently, users should be able to understand a transaction without considering the effect of other concurrently existing transactions
+
+### Durability
+- Once a transaction has been successfully completed, its effect should persist even if the system crashes before all its changes are reflected on ddisk
+
+### Concurrency and Isolation
+
+### Interleaved Transcations
+- it allows multiple users of the DB to access it at the same time
+- When there are multiple transactions, actions(reading, writing, aborting or committing) in transactions could be interleaved to improve performance
+- Transaction schedule describes a list of actions from a set of transactions as seen by the DBMS
+    - Serial Schedule: If the actions of different transactions are not interleaved and are executed from start to end one by one
+    - Serializable Schedule: Over a set of committed transaction is a schedule whose effect is guaranteed to be identical to serial schedule
+
+<div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
+<h5> Clustering</h5>
+<a class="glightbox" href="images/concurrency.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img border="1," height="50%" src="images/concurrency.jpg" style="display: block; margin: 0 auto" width="100%"/></a> <br/>
+<!-- source: https://en.wikipedia.org/wiki/File:Cluster-2.svg -->
+
+### Anomalies due to concurrency
+- Interleaved execution can cause data object conflicts
+
+4 types of conflicts
+- dirty reads
+- unrepeatable read
+- phantom read (special case of unrepeatable read)
+- lost update
+
+### Lock
+- An object that ensures the net effect is identical to executing all transactions in a serial order to minimize anomalies
+- Types
+    - shared lock
+        - Does not prevent other transactions from acquiring the same shared lock
+        - No update, delete or put an exclusive lock items on which any other transaction holds a shared lock
+    - exclusive lock
+        - prevents other transactions from accessing the data
+
+Lock
+- Performance of locked-based concurrency control
+    - To resolve conflicts between transactions, it uses blocking and aborting.
+        - Blocking : holds locks that force other transactions to wait. (Most)
+        - Aborting : Stops and restarts a transaction.
+- As more transactions execute concurrently, the likelihood of blocking goes up.
+    - Solution : 
+        - 1) lock the smallest side objects,
+        - 2) reducing the time that transaction hold locks,
+        - 3) reduce hotspots
+
+## Anomalies due to concurrency
+
+1.Write-Read(WR) Conflict
+- Dirty Read: Transaction T2 could read a database object A that has been modified by another transaction T1 which has not yet committed. This can lead an inconsistent final database state.
+- Postgres doesn’t support dirty read.
+
+2.Read-Write(RW) Conflict
+- Unrepeatable Read : A transaction T2 could change the value of an object that has been read by a transaction T1, while T1 is still in progress. If T1 tries to read the value again, it will get a different result
+
+3.Read-Delete/Insert Conflict
+- Phantom Reads
+- Special case of unrepeatable reads.
+- If the collection of database objects is not fixed, but can grow and shrink through the insertion and deletion of objects, the results differs from serial execution of T1 and T2
+
+4.Write-Write(WW) Conflict
+- Lost Update : For concurrent transactions, a transaction T2 could overwrite the value of an object A which has already been modified by a transaction T1
+
+### Durability
+- Write-Ahead Logging (WAL)
+    - Any change to a database object is first recorded in the log before the change to the database object is written to disk.
+    - Postgres way of logging actions.
+    - A recovery algorithm that ensures data integrity.
+    - Significantly reduce the number of disk writes, because only the log file needs to be flushed to disk.
+    - Helps “Durability” of a database.
+
+## Schema Refinement
+- Data Redundancy and Anomalies
+- Decomposition
+    - 1NF
+    - 2NF
+    - 3NF
+
+Recap
+### Schema
+- Schemas contain named objects including data types, functions, and operators.
+- Help organize database objects into logical groups to make them more manageable.
+- Are analogous to directories.
+- You can check schema in your database.
+    - SELECT *
+    - FROM information_schema.columns
+
+### Schema Refinement
+Data redundancy could cause the following problems.
+- Redundant storage : Some information is stored repeatedly.
+- Update anomalies : If one copy of repeated data is updated, an inconsistency is created unless all copy are updated.
+- Insert anomalies : It may not be possible to store certain information unless some other, unrelated, information is stored as well.
+- Delete anomalies : It may not be possible to delete certain information without losing some other, unrelated. Information as well.
+
+#### We need to consider Functional Dependency : If column A of a table uniquely identifies the column B of same table, Attribute B is functionally dependent on attribute A (A-&gt;B).
+- eg hourly_wages are dependent on rating
+
+<div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
+<h5> Clustering</h5>
+<a class="glightbox" href="images/emp_table.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img border="2," height="100%" src="images/emp_table.jpg" style="display: block; margin: 5 auto" width="100%"/></a> <br/>
+<!-- source: https://en.wikipedia.org/wiki/File:Cluster-2.svg -->
+
+Schema Refinement
+Data redundancy could cause the following problems.
+- Redundant storage : The rating value 9 corresponds to the hourly wage 25, and this association is repeated twice.
+- Update anomalies :The hourly_wage in the first tuple could be updated without making a same change in the second tuple.
+- Insert anomalies : We cannot insert a tuple unless we know the hourly wage or the employee’s rating.
+- Delete anomalies : If we delete all tuples with a given rating value, we lose the association between the rating and hours_wage.
+
+## Decompositions
+Replacing a relation, R with two or more collection of smaller relations that each contain a subset of the attributes of R and together include all attributes in R.
+- Functional dependency (FD) and other integrity constraints (ICs) can be used to refine the schema.
+    - The set of all FDs implied by a given set F of FDs is called the closure of F, denoted as F+.
+    - Armstrong’s Axiom (3) can be applied repeatedly to infer all FDs implied by a set F of FDs. When X,Y, and Z are sets of attributes over a relation schema R:
+        - Reflectivity : If Y $\subseteq$ X, then X =&gt; Y.
+        - Augmentation : If X =&gt; Y, then XZ =&gt; YZ for any Z.
+        - Transitivity : If X =&gt; Y and Y =&gt; Z, then X =&gt; Z.
+- Should satisfy
+    - Lossless-join: We can recover the original relation from the decomposed relations.
+    - Dependency-preservation: If R is decomposed into X, Y and Z, and we enforce the FDs that hold on X, on Y and on Z, then all FDs that were given to hold on R must also hold.
+
+<br/><br/>
+On week 1, we designed database tables using an ER diagram.
+- Defined entity, relationship and their attributes.
+- Schemas from ER model can offer from redundancy.
+- Need to refine the initial design by
+    - 1) Taking the integrity constraints(ICs) into account more fully.
+    - 2) Considering performance criteria.
+    - 3) Considering typical workload and query types.
+
+## Relational Database Design
+
+6 Steps
+1. Requirement Analysis : Find out what the users want from the database.
+2. Conceptual Database Design : Develop a high-level description of the data to be stored. (ER diagram)
+3. Logical Database Design : Convert the conceptual database design into a database schema.
+4. Schema Refinement : Identify potential problems and refine it. (Normalization)
+5. Physical Database Design : Ensure that the database design meets desired performance criteria.
+6. Security Design : Define a role and identify the parts of the database that must/must not be accessible by the role
+
+## Normalization
+A technique for organizing data in a database to
+- Minimize redundancy to reduce redundant storage issues and insert/ update/ delete anomalies.
+- Ensure data integrity and consistency.
+- Makes easier to access and maintain the data.
+
+Can be accomplished through Normal Forms (NF).
+
+
+<div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
+<h5> Clustering</h5>
+<a class="glightbox" href="images/normalization.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img border="2," height="60%" src="images/normalization.jpg" style="display: block; margin: 5 auto" width="60%"/></a> <br/>
+<!-- source: https://en.wikipedia.org/wiki/Database_normalization -->
+
+## Normal Forms
+### First Normal Forms (1NF)
+- A table has a primary key.
+- A table has no repeating attributes or groups attributes.
+- Problems 
+    - still have insert/delete/update anomalies.
+
+### Candidate Keys
+Recap Week 1.
+- Super Key - A set of attributes which can uniquely identify a row.
+- Candidate Key - A minimal set of attributes which can uniquely identify a row.
+- Primary Key - A minimal set of attributes which can uniquely identify a row. (Cannot be NULL)
+- Unique Key - A candidate key which is not primary key, and could be multiple unique keys. Could be NULL
+
+### Second Normal Forms (2NF)
+- It is a 1NF.
+- It does not have any non-prime attribute that is functionally dependent on any subset of candidate keys. (Every non-prime attribute is dependent on the whole of every candidate key)
+- Non-prime attribute : attribute that is not a part of any candidate key
+- Problems
+    - slkjdhf
+
+### Third Normal Forms (3NF)
+- It is a 2NF.
+- Every non-prime attribute is non-transitively dependent on every key.
+- Transitivity : If X Y and Y Z, then X Z
+- Algorithm
+    1. Put the FDs in a standard form with a single attribute on the right side.
+    2. Minimize the left side of each FD while preserving equivalence to F+.
+    3. Delete redundant FDs.
+
+
+
+
+
+
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.oracle.com/database/what-is-database/" rel="noopener noreferrer" target="_blank">Oracle </a> <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://en.wikipedia.org/wiki/Relational_database" rel="noopener noreferrer" target="_blank">Wikipedia RDBMS </a> <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://dl.acm.org/doi/10.1145/362384.362685" rel="noopener noreferrer" target="_blank">EF Code 1970 paper </a> <a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+</ol>
+</div></div></div></div></div></div></div></div></div></div>
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was just okay" data-md-value="3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m-3.5-9A1.5 1.5 0 0 1 7 9.5 1.5 1.5 0 0 1 8.5 8 1.5 1.5 0 0 1 10 9.5 1.5 1.5 0 0 1 8.5 11M17 9.5a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 14 9.5 1.5 1.5 0 0 1 15.5 8 1.5 1.5 0 0 1 17 9.5M16 14v2H8v-2h8Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="3" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="5" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 Deepak Singh
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/deepsai8" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/deepaksingh8819" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
+      
+        <script src="../../javascripts/extra.js"></script>
+      
+        <script src="../../javascripts/feedback.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

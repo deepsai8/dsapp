@@ -106,6 +106,7 @@ extra:
 plugins:
   - plotly
   - markmap
+  - glightbox
   - search:
     # separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
 
@@ -124,6 +125,8 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - attr_list
+  - md_in_html
 
 nav:
   - Home: index.md

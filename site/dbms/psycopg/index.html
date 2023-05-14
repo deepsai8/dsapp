@@ -12,23 +12,27 @@
         <meta name="author" content="Deepak Singh">
       
       
-        <link rel="canonical" href="https://deepsai8.github.io/dsapp/blogs/">
+        <link rel="canonical" href="https://deepsai8.github.io/dsapp/dbms/psycopg/">
       
       
+        <link rel="prev" href="../sql_theory/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      
+        <link rel="next" href="../../markmap_01/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
-        <title>Index - Applied Data Science</title>
+        <title>psycopg - Applied Data Science</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -44,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -65,7 +69,7 @@
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -76,7 +80,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -98,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blogs-here" class="md-skip">
+        <a href="#psycopg2" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +118,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Applied Data Science" class="md-header__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
+    <a href="../.." title="Applied Data Science" class="md-header__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -133,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              psycopg
             
           </span>
         </div>
@@ -254,7 +258,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Applied Data Science" class="md-nav__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
+    <a href="../.." title="Applied Data Science" class="md-nav__button md-logo" aria-label="Applied Data Science" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -285,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -327,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../probstats/probability/" class="md-nav__link">
+      <a href="../../probstats/probability/" class="md-nav__link">
         Probability Theory
       </a>
     </li>
@@ -376,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deeplearning/nn/" class="md-nav__link">
+      <a href="../../deeplearning/nn/" class="md-nav__link">
         Neural Networks
       </a>
     </li>
@@ -396,14 +400,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -412,7 +418,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           DBMS
@@ -425,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dbms/sql_theory/" class="md-nav__link">
+      <a href="../sql_theory/" class="md-nav__link">
         SQL Theory
       </a>
     </li>
@@ -437,11 +443,48 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../dbms/psycopg/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          psycopg
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         psycopg
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#psycopg2" class="md-nav__link">
+    Psycopg2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -488,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markmap_01/" class="md-nav__link">
+      <a href="../../markmap_01/" class="md-nav__link">
         Markmap
       </a>
     </li>
@@ -510,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/index.md" class="md-nav__link">
+      <a href="../../blog/index.md" class="md-nav__link">
         Blog
       </a>
     </li>
@@ -542,8 +585,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#blogs-here" class="md-nav__link">
-    Blogs here
+  <a href="#psycopg2" class="md-nav__link">
+    Psycopg2
   </a>
   
 </li>
@@ -566,9 +609,219 @@
   
 
 
-  <h1>Index</h1>
+  <h1>psycopg</h1>
 
-<h3 id="blogs-here">Blogs here</h3>
+<h3 id="psycopg2">Psycopg2</h3>
+<p>It is a package that can be used to integrate PostgreSQL with Jupyter Lab/Notebook</p>
+<div class="highlight"><pre><span></span><code><span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">l1</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="n">l1</span>
+</code></pre></div>
+<pre><code>[1, 2]
+</code></pre>
+<table border="1" class="dataframe">\n  <thead>\n    <tr style="text-align: right;">\n      <th></th>\n      <th>IndexType</th>\n      <th>Scan</th>\n      <th>EqualitySearch</th>\n      <th>RangeSearch</th>\n      <th>Insert</th>\n      <th>Delete</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>no_index</td>\n      <td>BD</td>\n      <td>0.5BD</td>\n      <td>BD</td>\n      <td>2D</td>\n      <td>Search + D</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>hash</td>\n      <td>BD(R + 0.125) + 2BRC</td>\n      <td>2D</td>\n      <td>BD</td>\n      <td>4D</td>\n      <td>Search + 2D</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>btree</td>\n      <td>1.5BD</td>\n      <td>D$\\log_F$(1.5B)</td>\n      <td>D$\\log_F$(1.5B) + $log_2$(R) * C</td>\n      <td>Search + D</td>\n      <td>Search + D</td>\n    </tr>\n  </tbody>\n</table>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'IndexType'</span><span class="p">:[</span><span class="s1">'no_index'</span><span class="p">,</span> <span class="s1">'hash'</span><span class="p">,</span> <span class="s1">'btree'</span><span class="p">],</span>
+    <span class="s1">'Scan'</span><span class="p">:[</span><span class="s1">'BD'</span><span class="p">,</span> <span class="s1">'BD(R + 0.125) + 2BRC'</span><span class="p">,</span> <span class="s1">'1.5BD'</span><span class="p">],</span>
+     <span class="s1">'EqualitySearch'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'0.5BD'</span><span class="p">,</span> <span class="s1">'2D'</span><span class="p">,</span> <span class="sa">r</span><span class="s1">'D$\log_F$(1.5B)'</span><span class="p">],</span>
+     <span class="s1">'RangeSearch'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'BD'</span><span class="p">,</span> <span class="s1">'BD'</span><span class="p">,</span> <span class="sa">r</span><span class="s1">'D$\log_F$(1.5B) + $log_2$(R) * C'</span><span class="p">],</span>
+     <span class="s1">'Insert'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'2D'</span><span class="p">,</span> <span class="s1">'4D'</span><span class="p">,</span> <span class="s1">'Search + D'</span><span class="p">],</span>
+     <span class="s1">'Delete'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Search + D'</span><span class="p">,</span> <span class="s1">'Search + 2D'</span><span class="p">,</span> <span class="s1">'Search + D'</span><span class="p">]</span>
+    <span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">to_html</span><span class="p">()</span>
+</code></pre></div>
+<pre><code>'&lt;table border="1" class="dataframe"&gt;\n  &lt;thead&gt;\n    &lt;tr style="text-align: right;"&gt;\n      &lt;th&gt;&lt;/th&gt;\n      &lt;th&gt;IndexType&lt;/th&gt;\n      &lt;th&gt;Scan&lt;/th&gt;\n      &lt;th&gt;EqualitySearch&lt;/th&gt;\n      &lt;th&gt;RangeSearch&lt;/th&gt;\n      &lt;th&gt;Insert&lt;/th&gt;\n      &lt;th&gt;Delete&lt;/th&gt;\n    &lt;/tr&gt;\n  &lt;/thead&gt;\n  &lt;tbody&gt;\n    &lt;tr&gt;\n      &lt;th&gt;0&lt;/th&gt;\n      &lt;td&gt;no_index&lt;/td&gt;\n      &lt;td&gt;BD&lt;/td&gt;\n      &lt;td&gt;0.5BD&lt;/td&gt;\n      &lt;td&gt;BD&lt;/td&gt;\n      &lt;td&gt;2D&lt;/td&gt;\n      &lt;td&gt;Search + D&lt;/td&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n      &lt;th&gt;1&lt;/th&gt;\n      &lt;td&gt;hash&lt;/td&gt;\n      &lt;td&gt;BD(R + 0.125) + 2BRC&lt;/td&gt;\n      &lt;td&gt;2D&lt;/td&gt;\n      &lt;td&gt;BD&lt;/td&gt;\n      &lt;td&gt;4D&lt;/td&gt;\n      &lt;td&gt;Search + 2D&lt;/td&gt;\n    &lt;/tr&gt;\n    &lt;tr&gt;\n      &lt;th&gt;2&lt;/th&gt;\n      &lt;td&gt;btree&lt;/td&gt;\n      &lt;td&gt;1.5BD&lt;/td&gt;\n      &lt;td&gt;D$\\log_F$(1.5B)&lt;/td&gt;\n      &lt;td&gt;D$\\log_F$(1.5B) + $log_2$(R) * C&lt;/td&gt;\n      &lt;td&gt;Search + D&lt;/td&gt;\n      &lt;td&gt;Search + D&lt;/td&gt;\n    &lt;/tr&gt;\n  &lt;/tbody&gt;\n&lt;/table&gt;'
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'eid'</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span><span class="s1">'name'</span><span class="p">:[</span><span class="s1">'Jackson'</span><span class="p">,</span> <span class="s1">'Jonathan'</span><span class="p">,</span> <span class="s1">'Nabi'</span><span class="p">],</span> <span class="s1">'title'</span><span class="p">:[</span><span class="s1">'Director'</span><span class="p">,</span> <span class="s1">'Professor'</span><span class="p">,</span> <span class="s1">'Engineer'</span><span class="p">],</span> <span class="s1">'ssn'</span><span class="p">:[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'employees_2.csv'</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">!</span> <span class="n">pwd</span>
+</code></pre></div>
+<pre><code>/Users/deepaksingh/Desktop/MSDS/RDBMS
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="err">!</span> <span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
+</code></pre></div>
+<pre><code># conda environments:
+#
+base                  *  /Users/deepaksingh/opt/anaconda3
+discom                   /Users/deepaksingh/opt/anaconda3/envs/discom
+env-cassandra            /Users/deepaksingh/opt/anaconda3/envs/env-cassandra
+env-obb                  /Users/deepaksingh/opt/anaconda3/envs/env-obb
+env-tensors              /Users/deepaksingh/opt/anaconda3/envs/env-tensors
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'Iowa_Fleet_Summary_By_Year__County_And_Vehicle_Type.csv'</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Year</th>
+<th>Year Ending</th>
+<th>County Name</th>
+<th>County FIP</th>
+<th>Feature ID</th>
+<th>Motor Vehicle</th>
+<th>Vehicle Category</th>
+<th>Vehicle Type</th>
+<th>Tonnage</th>
+<th>Registrations</th>
+<th>Annual Fee</th>
+<th>Primary County Lat</th>
+<th>Primary County Long</th>
+<th>Primary County Coordinates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>2005</td>
+<td>12/31/2005</td>
+<td>No County</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Yes</td>
+<td>Automobile</td>
+<td>Automobile</td>
+<td>NaN</td>
+<td>3711</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2006</td>
+<td>12/31/2006</td>
+<td>No County</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Yes</td>
+<td>Motor Home</td>
+<td>Motor Home - A</td>
+<td>NaN</td>
+<td>1</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>2</th>
+<td>2008</td>
+<td>12/31/2008</td>
+<td>No County</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>Yes</td>
+<td>Automobile</td>
+<td>Automobile</td>
+<td>NaN</td>
+<td>14</td>
+<td>1021.0</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>3</th>
+<td>2008</td>
+<td>12/31/2008</td>
+<td>Ida</td>
+<td>19093.0</td>
+<td>465235.0</td>
+<td>Yes</td>
+<td>Bus</td>
+<td>Bus</td>
+<td>NaN</td>
+<td>5</td>
+<td>680.0</td>
+<td>42.386875</td>
+<td>-95.513496</td>
+<td>POINT (-95.5134962 42.3868747)</td>
+</tr>
+<tr>
+<th>4</th>
+<td>2011</td>
+<td>12/31/2011</td>
+<td>Jasper</td>
+<td>19099.0</td>
+<td>465238.0</td>
+<td>Yes</td>
+<td>Moped</td>
+<td>Moped</td>
+<td>NaN</td>
+<td>198</td>
+<td>1386.0</td>
+<td>41.686039</td>
+<td>-93.053765</td>
+<td>POINT (-93.053765 41.6860394)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">psycopg2</span> <span class="k">as</span> <span class="nn">pg</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">host</span> <span class="o">=</span> <span class="s1">'localhost'</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">5432</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">'msds691'</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s1">'postgres'</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">'postgres'</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">conn</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">host</span> <span class="o">=</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span> <span class="o">=</span> <span class="n">port</span><span class="p">,</span> <span class="n">database</span> <span class="o">=</span> <span class="n">database</span><span class="p">,</span> <span class="n">user</span> <span class="o">=</span> <span class="n">user</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="n">password</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">cur</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"select * from employees2"</span><span class="p">)</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</code></pre></div>
+<pre><code>[(1, 'Jackson', 'Director', None),
+ (2, 'Jonathan', 'Professor', None),
+ (3, 'Nabi', 'Engineer', None)]
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"select department_id from departments;"</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">did_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">did_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">did_list</span>
+</code></pre></div>
+<pre><code>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+</code></pre>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">conn</span>
+</code></pre></div>
+<pre><code>&lt;connection object at 0x137a48c10; dsn: 'user=postgres password=xxx dbname=msds691 host=localhost port=5432', closed: 0&gt;
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="n">cur</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 
 
   
@@ -695,16 +948,16 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
       
-        <script src="../javascripts/extra.js"></script>
+        <script src="../../javascripts/extra.js"></script>
       
-        <script src="../javascripts/feedback.js"></script>
+        <script src="../../javascripts/feedback.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
