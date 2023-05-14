@@ -89,8 +89,7 @@ A DBMS serves as an interface between the database and its end users or programs
 [^3]: <a target="_blank" rel="noopener noreferrer" href="https://dl.acm.org/doi/10.1145/362384.362685">EF Code 1970 paper </a>
 
 <div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
-<h5> RDB Design</h5>
-<img src="images/rdbms.png" border = 1, style="display: block; margin: 0 auto"> <br>
+<img src="./images/rdbms.png" border = 1, style="display: block; margin: 0 auto"> <br>
 
 ### 6 Steps of Relational DB Design
 1. Requirements Analysis: find out what the users want from the DB
@@ -197,11 +196,6 @@ The data control language consists of the statements that deal with the user aut
 <div style="border-radius:10px; border : #682F2F solid; background-color:white; font-size:110%; padding-left:10px; text-align:left">
 <h5> RDB Design</h5>
 <img src="images/func_maths1.jpg" width="100%" height = "50%" border = 1, style="display: block; margin: 0 auto"> <br>
-
-
-
-
-
 
 
 
